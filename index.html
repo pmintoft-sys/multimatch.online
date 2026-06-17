@@ -30,8 +30,7 @@ async function searchProducts() {
           <div class="r-price-col">
             ${r.wasPrice ? `<div class="r-was">A$${r.wasPrice}</div>` : ''}
             <div class="r-price ${i===0 ? 'best' : ''}">A$${r.price}</div>
-            <button class="r-btn ${i===0 ? 'primary' : ''}" onclick="event.stopPropagation(); buyProduct('${r.id}', '${r.retailer}', '${r.productUrl}', '${r.productId || r.id}')">Buy</button>
-          </div>
+<button class="btn-sm btn-secondary" onclick="showAddOrderForm()">+ Add order</button>          </div>
         </div>
       `).join('');
     } else {
